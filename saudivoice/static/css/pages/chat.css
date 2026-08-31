@@ -24,23 +24,9 @@
   text-align: start;
 }
 
-.profile-mark {
-  display: grid;
-  flex-shrink: 0;
-  place-items: center;
-  width: 54px;
-  height: 54px;
-  color: #fff;
-  font-size: 22px;
-  font-weight: 700;
-  background: linear-gradient(145deg, #0ca75a, #075d39);
-  border: 2px solid rgba(190, 246, 211, 0.72);
-  border-radius: 50%;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
-}
-
+.profile-mark,
 .profile-mark.female {
-  background: linear-gradient(145deg, #b6934f, #77602f);
+  display: none !important;
 }
 
 .profile-details {
@@ -379,7 +365,6 @@
   font-size: 11px;
 }
 
-/* زر إخفاء وإظهار المحادثة */
 .transcript-toggle {
   display: inline-flex;
   flex-shrink: 0;
