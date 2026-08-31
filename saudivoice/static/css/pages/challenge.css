@@ -1,0 +1,90 @@
+.challenge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: min(550px, 92vw);
+  min-height: 550px;
+  padding: 26px 32px;
+  text-align: center;
+}
+
+.challenge-meta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #ddf2e4;
+  font-size: 14px;
+}
+
+.progress-track {
+  width: 100%;
+  height: 7px;
+  margin: 10px 0 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 20px;
+}
+
+.progress-track span {
+  display: block;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(90deg, #34e77d, #8df4b1);
+  transition: 0.3s;
+}
+
+.challenge-sound {
+  display: grid;
+  place-items: center;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 12px;
+  background: rgba(45, 212, 113, 0.13);
+  border: 1px solid rgba(120, 238, 164, 0.35);
+  border-radius: 50%;
+}
+
+.challenge-card h1 { margin: 0 0 4px; font-size: 28px; }
+.challenge-status { min-height: 25px; margin: 0 0 15px; color: var(--muted); }
+.audio-actions { display: flex; margin-bottom: 18px; gap: 12px; direction: ltr; }
+.icon-button { width: 54px; height: 54px; font-size: 21px; }
+.icon-button.play { font-size: 24px; background: #079d50; border-color: #42d583; }
+.icon-button:disabled { opacity: 0.38; }
+
+.choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 11px;
+}
+
+.choice {
+  min-height: 52px;
+  color: #fff;
+  font-size: 17px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 14px;
+}
+
+.choice:not(:disabled):hover { background: rgba(255, 255, 255, 0.13); }
+.choice.correct { background: rgba(24, 175, 87, 0.48); border-color: #65ec9b; }
+.choice.wrong { background: rgba(184, 60, 47, 0.45); border-color: #ff8e82; }
+
+.feedback {
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+}
+
+.feedback strong { font-size: 18px; }
+.feedback p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+.next-button { margin-top: 13px; }
+.result { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.result > span { color: var(--muted); }
+.result > strong { margin: 4px; font-size: 58px; }
+.result > p { color: var(--muted); font-size: 17px; }
+.result-actions { display: flex; justify-content: center; gap: 12px; }

@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block title %}المحادثة الصوتية | البوت السعودي{% endblock %}
+{% block stage_class %}compact-stage chat-stage{% endblock %}
+
+{% block content %}
+<section class="glass-card voice-card" id="chat">
+
+  <div class="voice-live-panel">
+    <div class="voice-profile">
+      <span class="profile-mark" id="avatar" aria-hidden="true"></span>
+
+      <div class="profile-details">
+        <h1 id="assistantName">المساعد السعودي</h1>
+
+        <div class="profile-meta">
+          <span class="connection-dot" aria-hidden="true"></span>
+          <span id="headerStatus">يجهّز الجلسة الصوتية...</span>
+        </div>
+      </div>
+
+      <span class="dialect-badge" id="badge"></span>
+    </div>
+
+    <div class="voice-area">
+      <div class="voice-orb" id="voiceOrb" aria-hidden="true">
+        <div class="orb-ring orb-ring-outer"></div>
+        <div class="orb-ring orb-ring-inner"></div>
+
+        <div class="orb-bars">
+          {% for i in range(7) %}
+            <span></span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <p class="voice-state" id="voiceStatus">
+        سيبدأ المساعد بالترحيب
+      </p>
+
+      <p class="voice-hint">
+        يمكنك التحدث مباشرة أو كتابة رسالتك
+      </p>
+
+      <div class="voice-controls">
+        <button
+          class="round-control end-control"
+          id="endSession"
+          type="button"
+          aria-label="إنهاء الجلسة"
+        >
+          ×
+        </button>
+
+        <button
+          class="round-control stop-control"
+          id="stopReply"
+          type="button"
+          aria-label="إيقاف صوت المساعد"
+          hidden
+        >
+          ■
+        </button>
+
+        <button
+          class="round-control mic-control"
+          id="mic"
+          type="button"
+          aria-label="تشغيل الميكروفون"
+          disabled
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="9" y="3" width="6" height="11" rx="3"></rect>
+            <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3M9 21h6"></path>
+          </svg>
+        </button>
+      </div>
+
+      <button
+        class="primary-button compact fallback-play"
+        id="listen"
+        type="button"
+        hidden
+      >
+        تشغيل الترحيب
+      </button>
+    </div>
+
+    <div class="text-divider">
+      <span>أو اكتبي رسالتك</span>
+    </div>
+
+    <form class="message-form" id="messageForm" autocomplete="off">
+      <input
+        class="message-input"
+        id="messageInput"
+        type="text"
+        placeholder="اكتبي رسالتك هنا..."
+        maxlength="500"
+        aria-label="الرسالة النصية"
+      >
+
+      <button
+        class="send-message"
+        id="sendMessage"
+        type="submit"
+        disabled
+      >
+        إرسال
+      </button>
+    </form>
+
+    <small class="ai-disclosure">
+      الصوت مولّد بالذكاء الاصطناعي
+    </small>
+  </div>
+
+  <aside class="transcript-panel" id="transcriptPanel">
+    <div class="transcript-header">
+      <div>
+        <h2>سجل المحادثة</h2>
+        <p>يظهر الكلام بالتزامن مع الصوت</p>
+      </div>
+
+      <button
+        class="transcript-toggle"
+        id="transcriptToggle"
+        type="button"
+        aria-label="إخفاء سجل المحادثة"
+        aria-expanded="true"
+      >
+        ‹
+      </button>
+    </div>
+
+    <div
+      class="conversation-messages"
+      id="conversationMessages"
+      aria-live="polite"
+    >
+      <div class="conversation-empty" id="conversationEmpty">
+        <span class="empty-icon" aria-hidden="true">◌</span>
+        <p>ستظهر المحادثة هنا عند بدء الجلسة</p>
+      </div>
+    </div>
+
+    <div class="transcript-status">
+      <span class="transcript-status-dot" aria-hidden="true"></span>
+      <span>الجلسة الصوتية والنصية مترابطة</span>
+    </div>
+  </aside>
+
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script
+  type="module"
+  src="{{ url_for('static', filename='js/pages/chat.js') }}"
+></script>
+{% endblock %}

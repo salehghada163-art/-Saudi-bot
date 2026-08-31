@@ -1,0 +1,27 @@
+.about-card {
+  width: min(810px, 90vw);
+  padding: 43px 50px;
+}
+
+.about-card h1 { font-size: 45px; }
+.about-card > p:not(.overline) { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.9; }
+
+.about-card ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 25px 0 0;
+  padding: 0;
+  gap: 12px;
+  list-style: none;
+}
+
+.about-card li {
+  padding: 15px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.inline-button { margin-top: 20px; }
+.about-card .photo-credit { margin-top: 18px !important; color: rgba(255, 255, 255, 0.48) !important; font-size: 11px !important; }

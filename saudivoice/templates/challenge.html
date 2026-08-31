@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}تحدي اللهجات | البوت السعودي{% endblock %}
+{% block stage_class %}compact-stage{% endblock %}
+
+{% block content %}
+  <section class="glass-card challenge-card" id="challenge" data-room-gender="{{ room_gender }}">
+    <div class="challenge-meta"><span id="round">السؤال 1 من 5</span><span id="score">النقاط: 0</span></div>
+    <div class="progress-track"><span id="progressFill"></span></div>
+    <div class="challenge-sound" id="challengeAvatar" aria-hidden="true">
+      <div class="orb-bars small">{% for i in range(5) %}<span></span>{% endfor %}</div>
+    </div>
+    <h1 id="challengeTitle">استمع للجملة</h1>
+    <p class="challenge-status" id="challengeStatus">جاري تجهيز الجولة الأولى...</p>
+    <div class="audio-actions">
+      <button class="icon-button play" id="startChallenge" type="button" aria-label="بدء التحدي" disabled>▶</button>
+      <button class="icon-button" id="replay" type="button" aria-label="إعادة الاستماع" disabled>↻</button>
+      <button class="icon-button" id="stopVoice" type="button" aria-label="إيقاف الصوت" disabled>■</button>
+    </div>
+    <div class="choices" id="choices">
+      <button class="choice" data-answer="qassimi" type="button" disabled>القصيمية</button>
+      <button class="choice" data-answer="jeddawi" type="button" disabled>الجداوية</button>
+      <button class="choice" data-answer="southern" type="button" disabled>الجنوبية</button>
+      <button class="choice" data-answer="eastern" type="button" disabled>الشرقية</button>
+    </div>
+    <div class="feedback" id="feedback" hidden><strong id="feedbackTitle"></strong><p id="feedbackText"></p></div>
+    <button class="primary-button compact next-button" id="next" type="button" hidden>السؤال التالي</button>
+    <div class="result" id="result" hidden>
+      <span>نتيجتك النهائية</span><strong id="finalScore">0 / 5</strong><p id="resultText"></p>
+      <div class="result-actions"><button class="primary-button compact" id="again" type="button">إعادة التحدي</button><a class="outline-button" href="/?step=mode">العودة للتجربة</a></div>
+    </div>
+    <small class="ai-disclosure">الصوت مولّد بالذكاء الاصطناعي</small>
+  </section>
+{% endblock %}
+
+{% block scripts %}
+  <script src="{{ url_for('static', filename='js/challenge-data.js') }}"></script>
+  <script type="module" src="{{ url_for('static', filename='js/pages/challenge.js') }}"></script>
+{% endblock %}

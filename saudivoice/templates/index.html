@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block header %}
+  <header class="site-header">
+    <a class="site-brand" href="/" aria-label="الصفحة الرئيسية">البوت السعودي</a>
+    <nav class="desktop-nav" aria-label="التنقل الرئيسي">
+      <button type="button" data-show="home">الرئيسية</button>
+      <button type="button" data-show="gender">التجربة الصوتية</button>
+      <a href="/about">عن المشروع</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="فتح القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="قائمة الجوال" hidden>
+      <button type="button" data-show="home">الرئيسية</button>
+      <button type="button" data-show="gender">التجربة الصوتية</button>
+      <a href="/about">عن المشروع</a>
+    </nav>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <section class="screen home-screen is-active" id="homeScreen">
+    <div class="glass-card hero-card">
+      <p class="overline">تجربة وطنية تفاعلية</p>
+      <h1>اسمع المملكة بلهجاتها</h1>
+      <p>تجربة صوتية تفاعلية تحتفي بتنوّع اللهجات السعودية، وتعرّفك على تاريخ المملكة وثقافتها بصوت سعودي قريب منك</p>
+      <button class="primary-button" id="startExperience" type="button">بدء التجربة</button>
+    </div>
+  </section>
+
+  <section class="screen" id="genderScreen" hidden>
+    <div class="glass-card flow-card gender-panel">
+      <div class="flow-heading">
+        <span class="step-chip">١ من ٣</span>
+        <h2>كيف تفضّل أن نخاطبك؟</h2>
+        <p>اختر الصوت المناسب لك، ويمكنك تغيير اختيارك لاحقًا.</p>
+      </div>
+      <div class="gender-grid">
+        <button class="selection-card gender-option" type="button" data-gender="male">
+          <span class="voice-choice-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          <strong>صوت رجالي</strong><small>نبرة سعودية رجالية</small>
+        </button>
+        <button class="selection-card gender-option" type="button" data-gender="female">
+          <span class="voice-choice-art soft" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+          <strong>صوت نسائي</strong><small>نبرة سعودية نسائية</small>
+        </button>
+      </div>
+      <div class="flow-actions">
+        <button class="text-button" type="button" data-back="home">رجوع</button>
+        <button class="primary-button compact" id="genderNext" type="button" disabled>متابعة</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen" id="dialectScreen" hidden>
+    <div class="glass-card flow-card dialect-panel">
+      <div class="flow-heading">
+        <span class="step-chip">٢ من ٣</span>
+        <h2 id="dialectTitle">اختر اللهجة</h2>
+        <p>كل لهجة لها مفرداتها وإيقاعها الخاص.</p>
+      </div>
+      <div class="dialect-grid">
+        <button class="selection-card dialect-option" type="button" data-dialect="qassimi"><strong>القصيمية</strong><span>لهجة أهل القصيم والنفود</span></button>
+        <button class="selection-card dialect-option" type="button" data-dialect="jeddawi"><strong>الجداوية</strong><span>لهجة أهل جدة والحجاز</span></button>
+        <button class="selection-card dialect-option" type="button" data-dialect="southern"><strong>الجنوبية</strong><span>لهجة جنوب المملكة</span></button>
+        <button class="selection-card dialect-option" type="button" data-dialect="eastern"><strong>الشرقية</strong><span>لهجة أهل الأحساء والدمام</span></button>
+      </div>
+      <div class="flow-actions">
+        <button class="text-button" type="button" data-back="gender">رجوع</button>
+        <button class="primary-button compact" id="dialectNext" type="button" disabled>تابع</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen" id="modeScreen" hidden>
+    <div class="glass-card flow-card mode-panel">
+      <div class="flow-heading">
+        <span class="step-chip">٣ من ٣</span>
+        <h2>وش ودك تجرّب؟</h2>
+        <p class="selection-summary" id="selectionSummary"></p>
+      </div>
+      <div class="mode-grid">
+        <button class="mode-option featured" type="button" data-mode="chat">
+          <span class="mode-icon" aria-hidden="true">◉</span>
+          <span><strong>محادثة صوتية مباشرة</strong><small>تكلّم بصوتك واستمع لرد المساعد باللهجة التي اخترتها</small></span>
+        </button>
+        <button class="mode-option" type="button" data-mode="challenge">
+          <span class="mode-icon" aria-hidden="true">♪</span>
+          <span><strong>تحدي اللهجات</strong><small>استمع إلى خمس جمل وحاول معرفة اللهجة الصحيحة</small></span>
+        </button>
+      </div>
+      <div class="flow-actions single-back"><button class="text-button" type="button" data-back="dialect">رجوع</button></div>
+    </div>
+  </section>
+{% endblock %}
+
+{% block scripts %}
+  <script type="module" src="{{ url_for('static', filename='js/pages/index.js') }}"></script>
+{% endblock %}

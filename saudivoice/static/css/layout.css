@@ -1,0 +1,94 @@
+.site-shell {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  background: url("../images/masmak-real.jpg") center 48% / cover no-repeat;
+}
+
+.site-shell::before,
+.site-shell::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  inset: 0;
+}
+
+.site-shell::before {
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(4, 61, 39, 0.76), rgba(9, 91, 53, 0.54)),
+    linear-gradient(180deg, rgba(1, 35, 25, 0.56), rgba(3, 55, 35, 0.34) 45%, rgba(1, 31, 23, 0.68));
+}
+
+.site-shell::after {
+  background: radial-gradient(circle at 65% 42%, rgba(82, 177, 113, 0.16), transparent 42%);
+}
+
+.site-header {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  width: min(1220px, 92vw);
+  height: 86px;
+  margin: auto;
+  gap: 42px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.site-brand {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+  white-space: nowrap;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  margin-inline-start: auto;
+  gap: 34px;
+}
+
+.desktop-nav a,
+.desktop-nav button {
+  padding: 10px 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  transition: 0.2s;
+}
+
+.desktop-nav a:hover,
+.desktop-nav button:hover,
+.desktop-nav .active {
+  color: #fff;
+}
+
+.page-stage {
+  display: grid;
+  place-items: center;
+  height: calc(100svh - 86px);
+  padding: 28px 5vw 42px;
+}
+
+.compact-stage {
+  padding-top: 20px;
+  padding-bottom: 28px;
+}
+
+.screen {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  animation: screen-in 0.32s ease both;
+}
+
+@keyframes screen-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}

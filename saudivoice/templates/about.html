@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}عن المشروع | البوت السعودي{% endblock %}
+
+{% block header %}
+  <header class="site-header">
+    <a class="site-brand" href="/">البوت السعودي</a>
+    <nav class="desktop-nav">
+      <a href="/">الرئيسية</a><a href="/?step=gender">التجربة الصوتية</a><a class="active" href="/about">عن المشروع</a>
+    </nav>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <section class="glass-card about-card">
+    <p class="overline">تجربة رقمية سعودية</p>
+    <h1>عن البوت السعودي</h1>
+    <p>تجربة صوتية تفاعلية تحتفي بتنوّع اللهجات السعودية، وتقدّم محتوى مبسّطًا عن تاريخ المملكة وهويتها وثقافتها. يختار المستخدم الصوت واللهجة، ثم يبدأ محادثة صوتية أو يختبر معرفته في تحدي اللهجات.</p>
+    <ul><li>أربع لهجات سعودية</li><li>أصوات رجالية ونسائية</li><li>محادثة صوتية وتحدي تفاعلي </li></ul>
+    <a class="primary-button inline-button" href="/?step=gender">بدء التجربة</a>
+  </section>
+{% endblock %}

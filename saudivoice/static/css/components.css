@@ -1,0 +1,122 @@
+.glass-card {
+  background: linear-gradient(145deg, rgba(6, 83, 51, 0.91), rgba(5, 56, 40, 0.86));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(17px);
+}
+
+.primary-button,
+.outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 27px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 13px;
+  transition: 0.2s;
+}
+
+.primary-button {
+  color: #fff;
+  background: linear-gradient(135deg, #0a9c50, #08763f);
+  border: 1px solid rgba(97, 235, 151, 0.35);
+  box-shadow: 0 12px 28px rgba(0, 107, 55, 0.28);
+}
+
+.primary-button:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.primary-button.compact {
+  min-height: 46px;
+  padding-inline: 25px;
+}
+
+.outline-button {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+}
+
+.back-link {
+  margin-inline-start: auto;
+  padding: 9px 17px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  margin-inline-start: auto;
+  padding: 10px;
+  background: transparent;
+  border: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  margin: 5px 0;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+
+.menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 260px;
+  padding: 10px;
+  background: rgba(4, 56, 38, 0.94);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.mobile-menu a,
+.mobile-menu button {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  color: #fff;
+  text-align: right;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  border-radius: 11px;
+}
+
+.mobile-menu a:hover,
+.mobile-menu button:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.overline {
+  margin: 0 0 9px;
+  color: #bbefcf;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.ai-disclosure {
+  display: block;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 11px;
+}

@@ -1,0 +1,323 @@
+@media (max-width: 760px) {
+  body {
+    overflow: auto;
+  }
+
+  .site-header {
+    width: 90vw;
+    height: 70px;
+  }
+
+  .site-brand {
+    font-size: 23px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .page-stage {
+    height: auto;
+    min-height: calc(100svh - 70px);
+    padding: 18px 4vw 28px;
+  }
+
+  .chat-stage {
+    align-items: start;
+  }
+
+  .glass-card {
+    border-radius: 22px;
+  }
+
+  .hero-card,
+  .flow-card,
+  .about-card {
+    width: 92vw;
+  }
+
+  .hero-card,
+  .about-card {
+    padding: 28px 24px;
+  }
+
+  .hero-card h1 {
+    font-size: 37px;
+  }
+
+  .hero-card > p:not(.overline) {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .flow-card {
+    padding: 22px;
+  }
+
+  .flow-heading {
+    margin-bottom: 16px;
+  }
+
+  .flow-heading h2 {
+    font-size: 26px;
+  }
+
+  .gender-grid {
+    gap: 12px;
+  }
+
+  .gender-option {
+    min-height: 165px;
+    padding: 18px 10px;
+  }
+
+  .voice-choice-art {
+    width: 76px;
+    height: 76px;
+  }
+
+  .voice-choice-art i {
+    height: 20px;
+  }
+
+  .voice-choice-art i:nth-child(2),
+  .voice-choice-art i:nth-child(4) {
+    height: 34px;
+  }
+
+  .voice-choice-art i:nth-child(3) {
+    height: 46px;
+  }
+
+  .gender-option strong,
+  .dialect-option strong,
+  .mode-option strong {
+    font-size: 17px;
+  }
+
+  .dialect-grid {
+    gap: 10px;
+  }
+
+  .dialect-option {
+    padding: 13px;
+  }
+
+  .dialect-option span,
+  .mode-option small {
+    font-size: 12px;
+  }
+
+  .mode-option {
+    padding: 15px;
+  }
+
+  .voice-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 92vw;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .voice-live-panel {
+    padding: 20px 18px 17px;
+  }
+
+  .voice-profile {
+    gap: 10px;
+  }
+
+  .profile-mark {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .voice-profile h1 {
+    font-size: 18px;
+  }
+
+  .dialect-badge {
+    padding: 4px 9px;
+    font-size: 11px;
+  }
+
+  .voice-area {
+    padding: 20px 0 13px;
+  }
+
+  .voice-orb {
+    width: 185px;
+    height: 185px;
+  }
+
+  .orb-ring-outer {
+    inset: -14px;
+  }
+
+  .orb-ring-inner {
+    inset: -7px;
+  }
+
+  .voice-state {
+    margin-top: 17px;
+    font-size: 17px;
+  }
+
+  .voice-hint {
+    margin-bottom: 13px;
+  }
+
+  .round-control {
+    width: 51px;
+    height: 51px;
+  }
+
+  .message-form {
+    padding: 5px;
+  }
+
+  .message-input {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .send-message {
+    min-width: 64px;
+    padding: 0 12px;
+  }
+
+  .transcript-panel {
+    min-height: 330px;
+    padding: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    border-inline-start: 0;
+  }
+
+  .conversation-messages {
+    min-height: 220px;
+    max-height: 300px;
+  }
+
+  .voice-card.transcript-hidden {
+    width: 92vw;
+  }
+
+  .challenge-card {
+    min-height: 525px;
+    padding: 22px;
+  }
+
+  .about-card h1 {
+    font-size: 35px;
+  }
+
+  .about-card > p:not(.overline) {
+    font-size: 16px;
+  }
+
+  .about-card ul {
+    grid-template-columns: 1fr;
+  }
+
+  .back-link {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+}
+
+
+@media (max-height: 700px) and (min-width: 761px) {
+  .site-header {
+    height: 72px;
+  }
+
+  .page-stage {
+    height: calc(100svh - 72px);
+    padding: 14px;
+  }
+
+  .hero-card {
+    padding: 34px 44px;
+  }
+
+  .flow-card {
+    padding: 22px 30px;
+  }
+
+  .voice-card {
+    width: min(920px, 96vw);
+    min-height: 500px;
+    padding: 0;
+  }
+
+  .voice-live-panel {
+    padding: 16px 28px 14px;
+  }
+
+  .voice-area {
+    padding: 10px 0 7px;
+  }
+
+  .voice-orb {
+    width: 170px;
+    height: 170px;
+  }
+
+  .voice-state {
+    margin-top: 12px;
+    font-size: 17px;
+  }
+
+  .voice-hint {
+    margin-bottom: 9px;
+  }
+
+  .round-control {
+    width: 49px;
+    height: 49px;
+  }
+
+  .text-divider {
+    margin-bottom: 7px;
+  }
+
+  .transcript-panel {
+    padding: 16px;
+  }
+
+  .conversation-messages {
+    max-height: 365px;
+    padding: 14px 2px;
+  }
+
+  .challenge-card {
+    min-height: 500px;
+    padding: 20px;
+  }
+
+  .challenge-sound {
+    width: 70px;
+    height: 70px;
+  }
+
+  .about-card {
+    padding: 30px 40px;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
