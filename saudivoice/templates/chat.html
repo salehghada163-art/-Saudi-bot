@@ -7,9 +7,8 @@
 <section class="glass-card voice-card" id="chat">
 
   <div class="voice-live-panel">
-    <div class="voice-profile">
-      <span class="profile-mark" id="avatar" aria-hidden="true"></span>
 
+    <div class="voice-profile">
       <div class="profile-details">
         <h1 id="assistantName">المساعد السعودي</h1>
 
@@ -70,8 +69,17 @@
           disabled
         >
           <svg viewBox="0 0 24 24" aria-hidden="true">
-            <rect x="9" y="3" width="6" height="11" rx="3"></rect>
-            <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3M9 21h6"></path>
+            <rect
+              x="9"
+              y="3"
+              width="6"
+              height="11"
+              rx="3"
+            ></rect>
+
+            <path
+              d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v3M9 21h6"
+            ></path>
           </svg>
         </button>
       </div>
@@ -90,7 +98,11 @@
       <span>أو اكتبي رسالتك</span>
     </div>
 
-    <form class="message-form" id="messageForm" autocomplete="off">
+    <form
+      class="message-form"
+      id="messageForm"
+      autocomplete="off"
+    >
       <input
         class="message-input"
         id="messageInput"
@@ -113,9 +125,13 @@
     <small class="ai-disclosure">
       الصوت مولّد بالذكاء الاصطناعي
     </small>
+
   </div>
 
-  <aside class="transcript-panel" id="transcriptPanel">
+  <aside
+    class="transcript-panel"
+    id="transcriptPanel"
+  >
     <div class="transcript-header">
       <div>
         <h2>سجل المحادثة</h2>
@@ -138,15 +154,32 @@
       id="conversationMessages"
       aria-live="polite"
     >
-      <div class="conversation-empty" id="conversationEmpty">
-        <span class="empty-icon" aria-hidden="true">◌</span>
-        <p>ستظهر المحادثة هنا عند بدء الجلسة</p>
+      <div
+        class="conversation-empty"
+        id="conversationEmpty"
+      >
+        <span
+          class="empty-icon"
+          aria-hidden="true"
+        >
+          ◌
+        </span>
+
+        <p>
+          ستظهر المحادثة هنا عند بدء الجلسة
+        </p>
       </div>
     </div>
 
     <div class="transcript-status">
-      <span class="transcript-status-dot" aria-hidden="true"></span>
-      <span>الجلسة الصوتية والنصية مترابطة</span>
+      <span
+        class="transcript-status-dot"
+        aria-hidden="true"
+      ></span>
+
+      <span>
+        الجلسة الصوتية والنصية مترابطة
+      </span>
     </div>
   </aside>
 

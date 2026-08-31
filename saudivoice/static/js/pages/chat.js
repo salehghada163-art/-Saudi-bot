@@ -39,7 +39,6 @@ class RealtimeVoiceController {
 
     this.ui = {
       card: $("#chat"),
-      avatar: $("#avatar"),
       assistantName: $("#assistantName"),
       badge: $("#badge"),
       voiceStatus: $("#voiceStatus"),
@@ -150,14 +149,6 @@ class RealtimeVoiceController {
   }
 
   renderProfile() {
-    this.ui.avatar.textContent =
-      this.isFemale ? "ن" : "ر";
-
-    this.ui.avatar.classList.toggle(
-      "female",
-      this.isFemale
-    );
-
     this.ui.assistantName.textContent =
       this.isFemale
         ? "المساعدة السعودية"
